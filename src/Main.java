@@ -5,6 +5,7 @@ import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class Main {
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("Jentoria de java");
         mentoria.setDescricao("Descrição mentoria java");
-        mentoria.setData(LocalDate.now());
+        mentoria.setData(LocalDate.parse(LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))));
 
         /*System.out.println(curso1);
         System.out.println(curso2);
